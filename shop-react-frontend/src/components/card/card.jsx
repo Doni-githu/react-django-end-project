@@ -10,15 +10,17 @@ const Card = ({ title, image, cost, i }) => {
   const [token] = useCookies(['mytoken'])
   const [user] = useCookies(['user'])
   const { state, dispatch } = useContext(Context)
-  const getID = async (id) => {
+  const getID = (id) => {
     dispatch({ type: 'findById', payload: id })
-    // await axios.post('http://localhost:8000/api/buy/', { user: parseInt(user.user), product: id, max_num: 1, }, {
-    //   headers: {
-    //     Authorization: `Token ${token.mytoken}`,
-    //   }
-    // })
-    //   .then((res) => console.log(res.data))
-    //   .catch((error) => console.log(error.response))
+    console.log(id);
+    axios.post('http://localhost:8000/api/buy/', {
+      user: parseInt(user.user), product: id, max_num: 1,
+    }, {
+      headers: {
+        Authorization: `Token ${token.mytoken}`,
+      }
+    }).then((res) => console.log(res.data))
+      .catch((error) => console.log(error.response))
   }
 
   return (

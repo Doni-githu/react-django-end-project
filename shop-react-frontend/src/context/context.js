@@ -1,5 +1,4 @@
 import { createContext, useReducer } from "react";
-import axios from "axios";
 const initialValue = {
   data: [],
   user: "",
@@ -43,7 +42,9 @@ const reducer = (state = initialValue, action) => {
       const newBasket = state.basket.filter(c => c.id !== payload)
       return { ...state, basket: [...newBasket] }
     case "find":
-      return { ...state, basket: [...payload] }
+      return { ...state, basket: [...state.basket, payload] }
+    case "startGet":
+      return { ...state, basket: [] }
     default:
       return { state };
   }

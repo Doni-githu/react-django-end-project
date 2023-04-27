@@ -38,7 +38,7 @@ const GlobalChat = () => {
 
   return (
     <div className="chat">
-      <div className="btns">
+      <div className="btns2">
         <button
           className="global"
           onClick={() => {
@@ -58,7 +58,7 @@ const GlobalChat = () => {
           Private chat
         </button>
       </div>
-      <div className="globalChat" id="globalChat">
+      <div className="globalChat">
         {globalPrivate === "private" && modal ? (
           <div className="bg">
             <div className="confirm">
@@ -88,11 +88,11 @@ const GlobalChat = () => {
           <div className="items">
             {globalPrivate === "global"
               ? state.messages.map((mal, i) => (
-                  <GlobalChatItem key={i++} chats={mal} />
-                ))
+                <GlobalChatItem key={i++} chats={mal} />
+              ))
               : messages_p.map((mal, i) => (
-                  <GlobalChatItem key={i++} chats={mal} />
-                ))}
+                <GlobalChatItem key={i++} chats={mal} />
+              ))}
           </div>
         </div>
         <div className="forms">

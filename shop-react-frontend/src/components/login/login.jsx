@@ -40,8 +40,10 @@ const Login = () => {
             setImage("image", mal.image);
             setAdmin("admin", isAdmin(mal.is_biznes));
           }
-        });
-      });
+        })
+      }).catch((err) => {
+        console.log(err.response.data?.non_field_errors)
+      })
   };
 
   return (

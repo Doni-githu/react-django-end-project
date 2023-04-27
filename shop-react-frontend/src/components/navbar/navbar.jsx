@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
-import { BsFillBoxSeamFill, BsFillChatLeftDotsFill, BsMenuApp, BsMenuButton } from "react-icons/bs";
+import { BsFillBoxSeamFill, BsFillChatLeftDotsFill, BsMenuApp, BsMenuAppFill, BsMenuButton, BsMenuButtonWide } from "react-icons/bs";
 import { FaPage4, FaPagelines, FaShoppingBasket } from "react-icons/fa"
-import { ImExit, ImMenu } from "react-icons/im";
+import { ImExit, ImMenu, ImMenu3, ImMenu4 } from "react-icons/im";
 import { GiEating, GiExitDoor } from "react-icons/gi";
 import { useCookies } from "react-cookie";
 

@@ -37,7 +37,7 @@
 }
 
 .scrol {
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 95%;
   height: 100%;
 }
@@ -106,26 +106,26 @@
   width: 90%;
 }
 
-.chat .btns {
+.chat .btns2 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 800px;
 }
 
-.chat .btns button {
+.chat .btns2 button {
   width: 150px;
   height: 45px;
 }
 
-.chat .btns .global {
+.chat .btns2 .global {
   background-color: #2ec4b6;
   border: none;
   color: #fff;
   border-top-left-radius: 5px;
 }
 
-.chat .btns .private {
+.chat .btns2 .private {
   background-color: #fff;
   border: 1px solid #2ec4b6;
   color: #2ec4b6;
@@ -133,7 +133,7 @@
   border-top-right-radius: 5px;
 }
 
-.bg .confirm .btns button {
+.bg .confirm .btns2 button {
   width: 45%;
   height: 55px;
   background-color: #2ec4b6;
@@ -142,14 +142,33 @@
   border-radius: 3px;
 }
 
-.bg .confirm .btns button:focus {
+.bg .confirm .btns2 button:focus {
   transition: 0.1s all linear;
   border-radius: 6px;
   outline: 3px solid #9dfff5;
 }
 
-@media only screen and (max-width:848px) {
-  .globalChat{
+
+@media only screen and (max-width:850px) {
+  .globalChat {
+    width: 600px;
+  }
+
+  .btns2 {
+    width: 600px !important;
+  }
+
+  .scrol {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:658px) {
+  .globalChat {
     width: 400px;
-  } 
+  }
+
+  .btns2 {
+    width: 400px !important;
+  }
 }

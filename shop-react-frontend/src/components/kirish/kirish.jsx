@@ -2,8 +2,6 @@ import { useState } from "react";
 import Login from "../login/login";
 import Register from "../register/register";
 import "./kirish.scss";
-import { AiOutlineArrowRight } from "react-icons/ai";
-
 const Kirish = () => {
   const [loginOr, setLoginOr] = useState("kirish");
 
